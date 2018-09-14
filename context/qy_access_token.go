@@ -34,10 +34,12 @@ func (ctx *Context) GetQyAccessToken() (accessToken string, err error) {
 	defer ctx.accessTokenLock.Unlock()
 
 	accessTokenCacheKey := fmt.Sprintf("qy_access_token_%s", ctx.AppID)
-	val := ctx.Cache.Get(accessTokenCacheKey)
-	if val != nil {
-		accessToken = val.(string)
-		return
+	if ctx.Cache != nil {
+		val := ctx.Cache.Get(accessTokenCacheKey)
+		if val != nil {
+			accessToken = val.(string)
+			return
+		}
 	}
 
 	//从微信服务器获取
@@ -71,6 +73,8 @@ func (ctx *Context) GetQyAccessTokenFromServer() (resQyAccessToken ResQyAccessTo
 
 	qyAccessTokenCacheKey := fmt.Sprintf("qy_access_token_%s", ctx.AppID)
 	expires := resQyAccessToken.ExpiresIn - 1500
-	err = ctx.Cache.Set(qyAccessTokenCacheKey, resQyAccessToken.AccessToken, time.Duration(expires)*time.Second)
+	if ctx.Cache != nil {
+		err = ctx.Cache.Set(qyAccessTokenCacheKey, resQyAccessToken.AccessToken, time.Duration(expires)*time.Second)
+	}
 	return
 }

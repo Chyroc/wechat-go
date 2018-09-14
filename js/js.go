@@ -68,11 +68,14 @@ func (js *Js) GetTicket() (ticketStr string, err error) {
 
 	//先从cache中取
 	jsAPITicketCacheKey := fmt.Sprintf("jsapi_ticket_%s", js.AppID)
-	val := js.Cache.Get(jsAPITicketCacheKey)
-	if val != nil {
-		ticketStr = val.(string)
-		return
+	if js.Cache != nil {
+		val := js.Cache.Get(jsAPITicketCacheKey)
+		if val != nil {
+			ticketStr = val.(string)
+			return
+		}
 	}
+
 	var ticket resTicket
 	ticket, err = js.getTicketFromServer()
 	if err != nil {
@@ -104,6 +107,8 @@ func (js *Js) getTicketFromServer() (ticket resTicket, err error) {
 
 	jsAPITicketCacheKey := fmt.Sprintf("jsapi_ticket_%s", js.AppID)
 	expires := ticket.ExpiresIn - 1500
-	err = js.Cache.Set(jsAPITicketCacheKey, ticket.Ticket, time.Duration(expires)*time.Second)
+	if js.Cache != nil {
+		err = js.Cache.Set(jsAPITicketCacheKey, ticket.Ticket, time.Duration(expires)*time.Second)
+	}
 	return
 }
