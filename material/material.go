@@ -20,7 +20,7 @@ type Material struct {
 	*context.Context
 }
 
-//NewMaterial init
+// NewMaterial init
 func NewMaterial(context *context.Context) *Material {
 	material := new(Material)
 	material.Context = context

@@ -32,7 +32,7 @@ type resTicket struct {
 	ExpiresIn int64  `json:"expires_in"`
 }
 
-//NewJs init
+// NewJs init
 func NewJs(context *context.Context) *Js {
 	js := new(Js)
 	js.Context = context

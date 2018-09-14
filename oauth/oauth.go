@@ -23,7 +23,7 @@ type Oauth struct {
 	*context.Context
 }
 
-//NewOauth 实例化授权信息
+// NewOauth 实例化授权信息
 func NewOauth(context *context.Context) *Oauth {
 	auth := new(Oauth)
 	auth.Context = context

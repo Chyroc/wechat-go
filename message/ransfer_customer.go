@@ -12,7 +12,7 @@ type TransInfo struct {
 	KfAccount string `xml:"KfAccount"`
 }
 
-//NewTransferCustomer 实例化
+// NewTransferCustomer 实例化
 func NewTransferCustomer(KfAccount string) *TransferCustomer {
 	tc := new(TransferCustomer)
 	if KfAccount != "" {

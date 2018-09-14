@@ -17,7 +17,7 @@ type User struct {
 	*context.Context
 }
 
-//NewUser 实例化
+// NewUser 实例化
 func NewUser(context *context.Context) *User {
 	user := new(User)
 	user.Context = context

@@ -22,7 +22,7 @@ type RedisOpts struct {
 	IdleTimeout int32  `yml:"idle_timeout" json:"idle_timeout"` //second
 }
 
-//NewRedis 实例化
+// NewRedis 实例化
 func NewRedis(opts *RedisOpts) *Redis {
 	pool := &redis.Pool{
 		MaxActive:   opts.MaxActive,
@@ -47,7 +47,7 @@ func NewRedis(opts *RedisOpts) *Redis {
 
 //SetConn 设置conn
 func (r *Redis) SetConn(conn *redis.Pool) {
-	r.conn = conn	
+	r.conn = conn
 }
 
 //Get 获取一个值
