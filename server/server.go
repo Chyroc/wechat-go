@@ -9,9 +9,9 @@ import (
 	"runtime/debug"
 	"strconv"
 
-	"github.com/silenceper/wechat/context"
-	"github.com/silenceper/wechat/message"
-	"github.com/silenceper/wechat/util"
+	"github.com/Chyroc/wechat-go/context"
+	"github.com/Chyroc/wechat-go/message"
+	"github.com/Chyroc/wechat-go/util"
 )
 
 //Server struct

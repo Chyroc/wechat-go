@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/silenceper/wechat/cache"
+	"github.com/Chyroc/wechat-go/cache"
 )
 
 // Context struct
