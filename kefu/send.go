@@ -1,4 +1,4 @@
-package kehu
+package kefu
 
 import (
 	"fmt"
