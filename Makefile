@@ -10,6 +10,4 @@ codestyle:
 	goimports -w -local='github.com/Chyroc/qx-go' `find . -name '*.go' | grep -v vendor`
 	golint -set_exit_status `go list ./... | grep -v /vendor/ | grep -v /ttt/*`
 
-all: codestyle test
-
 .PHONY: test
