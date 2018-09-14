@@ -35,7 +35,7 @@ type Server struct {
 	timestamp  int64
 }
 
-//NewServer init
+// NewServer init
 func NewServer(context *context.Context) *Server {
 	srv := new(Server)
 	srv.Context = context
@@ -63,9 +63,6 @@ func (srv *Server) Serve() error {
 	if err != nil {
 		return err
 	}
-
-	//debug
-	//fmt.Println("request msg = ", string(srv.requestRawXMLMsg))
 
 	return srv.buildResponse(response)
 }

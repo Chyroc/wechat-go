@@ -111,7 +111,7 @@ type MatchRule struct {
 	Language           string `json:"language,omitempty"`
 }
 
-//NewMenu 实例
+// NewMenu 实例
 func NewMenu(context *context.Context) *Menu {
 	menu := new(Menu)
 	menu.Context = context

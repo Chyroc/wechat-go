@@ -12,7 +12,7 @@ type Memcache struct {
 	conn *memcache.Client
 }
 
-//NewMemcache create new memcache
+// NewMemcache create new memcache
 func NewMemcache(server ...string) *Memcache {
 	mc := memcache.New(server...)
 	return &Memcache{mc}

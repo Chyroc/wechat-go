@@ -9,7 +9,7 @@ type Voice struct {
 	} `xml:"Voice"`
 }
 
-//NewVoice 回复语音消息
+// NewVoice 回复语音消息
 func NewVoice(mediaID string) *Voice {
 	voice := new(Voice)
 	voice.Voice.MediaID = mediaID

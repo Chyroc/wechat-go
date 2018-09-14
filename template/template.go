@@ -17,7 +17,7 @@ type Template struct {
 	*context.Context
 }
 
-//NewTemplate 实例化
+// NewTemplate 实例化
 func NewTemplate(context *context.Context) *Template {
 	tpl := new(Template)
 	tpl.Context = context
