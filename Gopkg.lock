@@ -2,47 +2,11 @@
 
 
 [[projects]]
-  digest = "1:63c5e4b6ac64d2d0289e8b75d314eaa929311d8d65afe6ecacdfac714fec1443"
-  name = "github.com/astaxie/beego"
-  packages = [
-    ".",
-    "config",
-    "context",
-    "grace",
-    "logs",
-    "session",
-    "toolbox",
-    "utils",
-  ]
-  pruneopts = "UT"
-  revision = "2d87d4feafeea0a133d217a82e6e02df0348fed5"
-  version = "v1.7.1"
-
-[[projects]]
   digest = "1:867be5f6a8d3bf4525390559899af512f48675932e2cc3cbaa2304e9c75fc1ba"
   name = "github.com/bradfitz/gomemcache"
   packages = ["memcache"]
   pruneopts = "UT"
   revision = "fb1f79c6b65acda83063cbc69f6bba1522558bfc"
-
-[[projects]]
-  digest = "1:9f1c5213a30b3ee13fdce43ac85823d476e11ff93496ef3019998baf035b4d88"
-  name = "github.com/gin-gonic/gin"
-  packages = [
-    ".",
-    "binding",
-    "render",
-  ]
-  pruneopts = "UT"
-  revision = "e2212d40c62a98b388a5eb48ecbdcf88534688ba"
-  version = "v1.1.4"
-
-[[projects]]
-  digest = "1:e9684f376cdd9a3b44b0a0cb8c626ce5e907a5541fad0c50e1e6d5f8999609ae"
-  name = "github.com/golang/protobuf"
-  packages = ["proto"]
-  pruneopts = "UT"
-  revision = "8ee79997227bf9b34611aee7946ae64735e6fd93"
 
 [[projects]]
   digest = "1:38ec74012390146c45af1f92d46e5382b50531247929ff3a685d2b2be65155ac"
@@ -55,59 +19,24 @@
   revision = "9c11da706d9b7902c6da69c592f75637793fe121"
   version = "v2.0.0"
 
-[[projects]]
-  branch = "master"
-  digest = "1:31bd492aa2822484bcec518e0b693e1aedfdf9637b43527c0ad29d5cf8abfd43"
-  name = "github.com/manucorporat/sse"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "ee05b128a739a0fb76c7ebd3ae4810c1de808d6d"
-
-[[projects]]
-  digest = "1:3dce9780102fd9dfd8b864b18b84b1f94868f992d455af69a4604fae5d3b24f1"
-  name = "github.com/mattn/go-isatty"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "30a891c33c7cde7b02a981314b4228ec99380cca"
-
-[[projects]]
-  digest = "1:c8904037a371cbf41a32bcda3c4c244bb71fb32e2cb4006457a4c3a897990783"
-  name = "golang.org/x/net"
-  packages = ["context"]
-  pruneopts = "UT"
-  revision = "f315505cf3349909cdf013ea56690da34e96a451"
-
-[[projects]]
-  digest = "1:e16c53d2592b2ba64d1a6da684a952bdff8815ed8b901b220fe875864b664643"
-  name = "golang.org/x/sys"
-  packages = ["unix"]
-  pruneopts = "UT"
-  revision = "a646d33e2ee3172a661fc09bca23bb4889a41bc8"
-
-[[projects]]
-  digest = "1:1b4724d3c8125f6044925f02b485b74bfec9905cbf579d95aafd1a6c8f8447d3"
-  name = "gopkg.in/go-playground/validator.v8"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "5f57d2222ad794d0dffb07e664ea05e2ee07d60c"
-  version = "v8.18.1"
-
-[[projects]]
-  digest = "1:cacb98d52c60c337c2ce95a7af83ba0313a93ce5e73fa9e99a96aff70776b9d3"
-  name = "gopkg.in/yaml.v2"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "a5b47d31c556af34a302ce5d659e6fea44d90de0"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/astaxie/beego",
-    "github.com/astaxie/beego/context",
     "github.com/bradfitz/gomemcache/memcache",
-    "github.com/gin-gonic/gin",
     "github.com/gomodule/redigo/redis",
+    "github.com/silenceper/wechat/cache",
+    "github.com/silenceper/wechat/context",
+    "github.com/silenceper/wechat/js",
+    "github.com/silenceper/wechat/material",
+    "github.com/silenceper/wechat/menu",
+    "github.com/silenceper/wechat/message",
+    "github.com/silenceper/wechat/oauth",
+    "github.com/silenceper/wechat/pay",
+    "github.com/silenceper/wechat/server",
+    "github.com/silenceper/wechat/template",
+    "github.com/silenceper/wechat/user",
+    "github.com/silenceper/wechat/util",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
